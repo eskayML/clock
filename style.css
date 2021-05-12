@@ -1,0 +1,104 @@
+
+
+body {
+    font-size: 15pt;
+    background-color:#ddd ;
+}
+
+#text{
+margin-top:100px;
+font-weight:bold;
+font-family:times new Roman;
+font-size:30px;
+color:#ddd;
+text-shadow:2px 2px 4px grey, -2px -2px 4px white;
+}
+
+#clock{
+    
+    width: 300px;
+    height:300px;
+    background-color: #ddd; 
+    border-radius: 50%;
+   position: relative;
+   box-shadow:inset 8px 8px 18px white,inset  -8px -8px 18px grey;
+} 
+
+#clock .no{
+    --rotation :0;
+    font-weight: 1000;
+    font-size: 25px;
+    width: 100%; height: 100%;
+    position: absolute;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    
+}
+
+
+
+#clock .hand .hour {
+    position: absolute;
+    width:10px;
+    height: 30%;
+    z-index: 5;
+    left: 50%;
+    bottom: 50%;
+    background-color: black;
+    transform: translateX(-50%);
+   border:1px solid white;
+    border-radius:7px;
+    transform-origin:bottom;
+    transform:rotate(0deg);
+}
+
+
+#clock .hand .min {
+position:absolute;
+z-index:6;
+border-radius:5px;
+border:1px solid white;
+transform-origin:bottom;
+width:8px; height:40%;
+background-color:black;
+left:50%; bottom:50%;
+transform:rotate(0deg);
+}
+
+
+#clock .hand .robo{
+position: absolute;
+z-index:100;
+background-color:black;
+bottom:47%;left:47%;
+width:22px;height:22px;border-radius:50%;
+
+}
+/*
+it's so simple the hands represent it in this file and I 🛀🛀🛀 don't know what exactly to say😂😂😂😂
+*/
+
+/*
+neuromorphism time👐👐👐👐👐👐👐👐👐👐
+*/
+
+
+#clock .hand .sec {
+    position: absolute;
+        
+    transform-origin:bottom;
+    width:2px;
+    height: 48%;
+    z-index: 9;
+    left: 50%;
+    bottom: 50%;
+    background-color:red;
+    transform: translateX(-50%);
+    border-radius:7px;
+    transform:rotate(0deg);
+    
+}
+
+
+
+

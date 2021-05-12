@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Analog Clock</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+ <div id="clock">
+     <div class="no"
+style="--rotation:30deg" > 1 
+     </div>
+     <div class="no" style="--rotation:60deg"  >2</div>
+     <div class="no"   style="--rotation:90deg"   >3</div>
+     <div class="no" style="--rotation:120deg"   >4</div>
+     <div class="no" style="--rotation:150deg"     >5</div>
+     <div class="no"   style="--rotation:180deg"    >6</div>
+     <div class="no"   style="--rotation:210deg"   >7</div>
+     <div class="no"   style="--rotation:240deg"   >8</div>
+     <div class="no"    style="--rotation: 270deg"   >9</div>
+     <div class="no"   style="--rotation:300deg"   >10</div>
+     <div class="no"   style="--rotation:330deg"    >11</div>
+     <div class="no" >12</div>
+ 
+ <div class="hand">
+ <div class="hour"></div>
+ <div class="min"></div>
+ <div class="sec"></div>
+ <div class="robo" ></div>
+ </div>
+ </div>
+ 
+ <div id="text" >
+ 	Created by: Eskay
+ </div>
+  
+  <script>
+  
+  let hour = document.getElementsByClassName("hour")[0]
+  let min = document.getElementsByClassName("min")[0]
+  let sec = document.getElementsByClassName("sec")[0]
+  
+show_time()  
+setInterval(show_time, 1000);
+
+function show_time() {
+ let now = new Date()
+ let h = now.getHours()
+ let m = now.getMinutes()
+ let s = now.getSeconds()
+  
+
+sec.style.transform = `rotate(${s/60 * 360}deg)`
+min.style.transform = `rotate(${m/60 * 360}deg)`
+hour.style.transform = `rotate(${((h%12)/12 * 360) + (m/60* 30) }deg)`
+
+} 
+
+
+  </script>
+</body>
+</html>
+
+
+
